@@ -3,17 +3,17 @@ import os
 
 
 def read_a_log(file_path):
-    '''Deal a file endding with .log. eg: log20220105_0.log'''
+    '''read a file ended with .log. eg: log20220105_0.log'''
     with open(file_path, 'r') as f:
         lines = f.readlines()
 
-    content = eval(lines[-2].rstrip()) # get the last line and transform it to dict object
+    content = eval(lines[-2].rstrip()) # get the last line and transform it to a dict object
     acc = content['uniform holdout']['acc']
     return acc
 
 
 def process_dir(current_dir):
-    '''process a directory. eg: grid(2,5)'''
+    '''process a directory. e.g., grid(2,5)'''
     accs = []
     for log_file in sorted(os.listdir(current_dir)):
         file_path = os.path.join(current_dir, log_file)
