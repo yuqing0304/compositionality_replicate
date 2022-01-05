@@ -3,7 +3,7 @@ import os
 
 
 def read_a_log(file_path):
-    '''read a file ended with .log. eg: log20220105_0.log'''
+    '''read a file ended with .log. e.g., log20220105_0.log'''
     with open(file_path, 'r') as f:
         lines = f.readlines()
 
