@@ -3,11 +3,11 @@ import os
 
 
 def read_a_log(file_path):
-    '''read fileS that end with .log. e.g., log20220105_0.log'''
+    '''read files that end with .log. e.g., log20220105_0.log'''
     with open(file_path, 'r') as f:
         lines = f.readlines()
 
-    content = eval(lines[-2].rstrip()) # get the last line and transform it to a dict object
+    content = eval(lines[-2].rstrip()) # get the last line and transform it into a dict object
     acc = content['uniform holdout']['acc']
     return acc
 
