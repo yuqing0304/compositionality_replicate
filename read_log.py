@@ -19,9 +19,9 @@ def process_dir(current_dir):
         file_path = os.path.join(current_dir, log_file)
         acc = read_a_log(file_path)
         accs.append(acc)
-    acc_mean = np.mean(accs)
-    acc_std = np.std(accs)
-    acc_sem = acc_std / np.sqrt(10)
+    acc_mean = np.mean(accs)  # mean
+    acc_std = np.std(accs)   # standard deviation
+    acc_sem = acc_std / np.sqrt(10)  # standard error of the mean
     return acc_mean, acc_sem
 
 
